@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+	-webkit-print-color-adjust: exact;
+}
+
+h1 {
+    font-size: 48px;
+    color: #371871;
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #5a5a5a;
+}
+
+.topo {
+
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+
+}
+
+.topo-scroll {
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.topo-scroll img {
+    height: 50px;
+}
+
+.topo .container {
+    /*Formantanto o container que está dentro do topo*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin-left: 45px;
+    font-size: 18px;
+
+}
+
+.menu a:hover {
+    color: #ffea5d;
+}
+
+.banner {
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+    /* 1vh = Altura do navegador /100 */
+    display: flex;
+    align-items: center;
+}
+
+.texto-banner {
+    width: 610px;
+
+
+}
+
+.texto-banner h1 {
+    font-size: 60px;
+    color: #ffea5d;
+    margin: 0;
+}
+
+.texto-banner p {
+    font-size: 24px;
+    color: white;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 35px;
+    background-color: #371871;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: 0.5s background-color;
+    border: none;
+}
+
+.btn:hover {
+    background-color: rgb(94, 53, 170);
+}
+
+.quem-somos .container {
+
+    display: flex;
+    padding: 100px 0;
+    justify-content: space-between;
+
+}
+
+.texto-quem-somos {
+    width: 500px;
+
+
+}
+
+
+.nossos-servicos {
+    background-color: #ffff99;
+}
+
+
+.nossos-servicos .container {
+
+    padding: 100px 0;
+
+}
+
+
+.colunas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.coluna {
+    width: 22%;
+    /*220px*/
+    text-align: center;
+    margin-top: 35px;
+
+}
+
+.fale-conosco .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.formulario input.campo-nome,
+input.campo-email,
+input.campo-telefone {
+    background-color: #ffff99;
+    width: 225px;
+    border: none;
+    margin-bottom: 5px;
+    width: 350px;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+
+.formulario textarea.campo-msg {
+    background-color: #ffff99;
+    border: none;
+    margin-bottom: 5px;
+    height: 160px;
+    width: 450px;
+    border-radius: 5px;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+
+
+}
+
+.rodape {
+    background-color: #330066;
+    padding: 25px 0;
+}
+
+.colunas-rodape {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.coluna-rodape {
+    width: 30%;
+    /*300px*/
+
+}
+
+.coluna-rodape h2 {
+    font-size: 24px;
+    color: white;
+}
+
+.coluna-rodape p {
+    color: white;
+    font-size: 16px;
+}
+
+
+/************** mobile**************/
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1024px) {
+
+    .banner {
+        height: 550px;
+    }
+
+    .coluna,
+    .coluna-rodape {
+        width: 30%;
+
+
+    }
+
+    .btn {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .btn-menu {
+        /* margin-top: 20px; */
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        left: 0;
+        top:0;
+        width: 70%;
+        height: 100vh;
+        background-color: #170a2e;
+        
+        
+    }
+
+    .menu a{
+        display: block;
+        margin: 0;
+        text-align: center;
+        padding: 30px;
+        border-bottom: 1px solid #ffea5d;
+        
+    }
+
+    .texto-quem-somos {
+        width: 100%;
+    }
+
+    .img-quem-somos {
+        display: none;
+    }
+
+    .fale-conosco img {
+        display: none;
+    }
+
+    .texto-banner {
+        text-shadow: 2px 2px 2px #666666;
+    }
+
+
+    /********** menu hamburger **********/
+    .barra {
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 3px;
+        transition: 0.5s;
+    }
+
+    .x .barra:first-child {
+        transform: rotate(45deg) translate(4px, 4px);
+
+    }
+
+    .x .barra:nth-child(2) {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+
+    .x .barra:last-child {
+        transform: rotate(-45deg) translate(4px, -4px);
+    }
+
+    /********** menu hamburger **********/
+
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    .colunas,
+    .colunas-rodape {
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .coluna,
+    .coluna-rodape {
+
+        width: 60%;
+
+    }
+
+    .texto-banner {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+
+    }
+
+    p {
+        font-size: 14;
+
+    }
+
+    .formulario input.campo-nome,
+    input.campo-email,
+    input.campo-telefone {
+
+        width: 100%;
+        box-sizing: border-box;
+        /*Faz com que o valor de padding/border não some com height*/
+
+
+    }
+
+    .formulario textarea.campo-msg {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+
+
+    .texto-banner h1 {
+        font-size: 30px;
+
+
+    }
+
+    .texto-banner p {
+        font-size: 18px;
+
+    }
+
+}

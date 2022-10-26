@@ -1,0 +1,24 @@
+ 	<script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/jquery.localScroll.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('.menu').localScroll({
+                    target:'body',
+                    duration: 2000,
+		    offset: 0
+                });
+            });
+
+            $(window).scroll(function(){
+                //console.log('rolou');
+
+                if($(window).scrollTop() > 0){
+                    $('.topo').addClass('topo-scroll');
+                }else{
+                    $('.topo').removeClass('topo-scroll');
+                }
+
+            });
+        </script>
